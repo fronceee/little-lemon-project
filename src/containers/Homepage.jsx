@@ -1,7 +1,8 @@
-import React from 'react'
-import Hero from './Hero'
-import ThisWeekSpecial from './ThisWeekSpecial'
-import Testimonials from './Testimonials'
+import React from "react";
+import Hero from "./Hero";
+import ThisWeekSpecial from "./ThisWeekSpecial";
+import Testimonials from "./Testimonials";
+import About from "./About"
 
 function Homepage() {
   return (
@@ -9,8 +10,9 @@ function Homepage() {
       <Hero />
       <ThisWeekSpecial />
       <Testimonials />
+      <About />
     </main>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;

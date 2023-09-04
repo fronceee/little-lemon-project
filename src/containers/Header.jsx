@@ -3,7 +3,7 @@ import React from 'react'
 function Header(){
   return (
     <header>
-        <img src='./assets/Logo.svg'/>
+        <img id='logo' src='./assets/Logo.svg'/>
         <nav>
             <ul>
                 <li><a>HOME</a></li>

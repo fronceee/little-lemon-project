@@ -1,21 +1,24 @@
 import React from "react";
+import { v4 as id } from "uuid";
 
 function TestimonialCard() {
   const stars = [...new Array(5)].map((item) => (
-    <img src="./assets/Star.png" />
+    <img src="./assets/Star.png" key={id()} />
   ));
   return (
     <div className="testimonial-card">
-      <div>{stars}</div>
-      <div>
+      <div className="testimonial-card-stars">{stars}</div>
+      <div className="testimonial-card-avatar">
         <img
           src="./assets/review_pro_pic.png"
           alt="Testimonial Profile Picture"
         />
-        <p className="testimonial-name">Sara Lopez</p>
-        <p className="testimonial-username">Sara72</p>
+        <div className="testimonial-card-avatar-info">
+          <p className="testimonial-name">Sara Lopez</p>
+          <p className="testimonial-username">Sara72</p>
+        </div>
       </div>
-      <p>“Seriously cannot stop thinking about the Turkish Mac n’ Cheese!!”</p>
+      <p className="testimonial-description">“Seriously cannot stop thinking about the Turkish Mac n’ Cheese!!”</p>
     </div>
   );
 }

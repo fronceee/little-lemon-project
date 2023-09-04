@@ -5,5 +5,7 @@
 }
 
 body {
-  background-color: #EDEFEE;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  /* hidden overflow for long bg */
 }

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function GeneralButton({children}) {
-  return (
-    <button className='general-button'>
-        {children}
-    </button>
-  )
+function GeneralButton({ children }) {
+  return <button className="general-button">{children}</button>;
 }
 
-export default GeneralButton
+export default GeneralButton;

@@ -4,12 +4,12 @@ import RoundImage from "../components/RoundImage";
 
 function Hero() {
   return (
-    <section>
-      <div>
-        <h1 id="hero-text" className="heading">
+    <section id="hero">
+      <div id="hero-div">
+        <h1 id="hero-text" className="heading heading-1">
           Little Lemon
         </h1>
-        <h2 id="sub-hero-text" className="heading">
+        <h2 id="sub-hero-text" className="heading heading-2">
           Chicago
         </h2>
         <p id="hero-paragraph" className="paragraph">
@@ -18,7 +18,7 @@ function Hero() {
         </p>
         <ReserveATableButton />
       </div>
-      <RoundImage src={"./assets/hero.png"} />
+      <RoundImage id="hero-img" src={"./assets/hero.png"} />
     </section>
   );
 }
