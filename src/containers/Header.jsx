@@ -11,19 +11,7 @@ function Header() {
             <Link to="/">HOME</Link>
           </li>
           <li>
-            <a>ABOUT</a>
-          </li>
-          <li>
-            <a>MENU</a>
-          </li>
-          <li>
             <Link to="/reservations">RESERVATIONS</Link>
-          </li>
-          <li>
-            <a>ORDER ONLINE</a>
-          </li>
-          <li>
-            <a>LOGIN</a>
           </li>
         </ul>
       </nav>

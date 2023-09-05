@@ -3,7 +3,7 @@ import { useEffect, useReducer, useState } from "react";
 import Footer from "./containers/Footer";
 import Header from "./containers/Header";
 import Homepage from "./containers/Homepage";
-import { Route, Routes, Outlet } from "react-router";
+import { Route, Routes, Outlet, redirect, useNavigate } from "react-router";
 import { fetchAPI } from "./mockAPI";
 import Reservation from "./containers/Reservation";
 
@@ -54,6 +54,8 @@ function App() {
   };
   const [state, dispatch] = useReducer(reducer, initialState);
   const [allVacantTime, setAllVacantTime] = useState([]);
+
+  const navigate = useNavigate()
   useEffect(() => {
     if (state.date) {
       fetchAPI(new Date(state.date))
@@ -64,6 +66,14 @@ function App() {
         });
     }
   }, [state.date]);
+
+  function handleSubmit() {
+    alert(
+      `Date: ${state.date}\nTime: ${state.time}\nGuests ${state.guestsNum}\nOcasion: ${state.occasion}\nYour Reservation is sent!`
+    );
+    navigate(0)
+  }
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -75,6 +85,7 @@ function App() {
               state={state}
               dispatch={dispatch}
               allVacantTime={allVacantTime}
+              handleSubmit={handleSubmit}
             />
           }
         />

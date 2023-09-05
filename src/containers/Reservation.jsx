@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { v4 as id } from "uuid";
 
 function Reservation({ state, dispatch, allVacantTime, handleSubmit }) {
+  const ref = useRef(null);
   function handleDateChange(e) {
     dispatch({ type: "update_date", payload: e.target.value });
   }
@@ -20,7 +21,7 @@ function Reservation({ state, dispatch, allVacantTime, handleSubmit }) {
 
   function submitForm(e) {
     e.preventDefault();
-    handleSubmit()
+    handleSubmit();
   }
 
   return (
@@ -47,6 +48,7 @@ function Reservation({ state, dispatch, allVacantTime, handleSubmit }) {
           className="reservation-input"
           onChange={handleTimeChange}
           required
+          disabled={allVacantTime?.length === 0}
         >
           {allVacantTime?.map((item) => (
             <option key={id()}>{item}</option>
@@ -77,7 +79,12 @@ function Reservation({ state, dispatch, allVacantTime, handleSubmit }) {
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input aria-label="On Click" data-testid="submit-btn" type="submit" value="Make Your reservation" />
+        <input
+          aria-label="On Click"
+          data-testid="submit-btn"
+          type="submit"
+          value="Make Your reservation"
+        />
       </form>
     </section>
   );
