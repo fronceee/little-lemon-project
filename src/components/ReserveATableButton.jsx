@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function ReserveATableButton() {
+function ReserveATableButton({ ...props }) {
   return (
-    <button className='reserve-hero-btn'>
-        Reserve a Table
+    <button className="reserve-hero-btn" {...props}>
+      Reserve a Table
     </button>
-  )
+  );
 }
 
-export default ReserveATableButton
+export default ReserveATableButton;

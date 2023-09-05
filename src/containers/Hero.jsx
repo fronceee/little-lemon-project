@@ -18,7 +18,7 @@ function Hero() {
           recipes served with a modern twist.
         </p>
 
-        <Link to="/reservations">
+        <Link to="/reservations" aria-label="reserve button">
           <ReserveATableButton />
         </Link>
       </div>
