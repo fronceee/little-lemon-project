@@ -1,6 +1,7 @@
 import React from "react";
 import ReserveATableButton from "../components/ReserveATableButton";
 import RoundImage from "../components/RoundImage";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -16,8 +17,12 @@ function Hero() {
           We are a family owned Mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <ReserveATableButton />
+
+        <Link to="/reservations">
+          <ReserveATableButton />
+        </Link>
       </div>
+
       <RoundImage id="hero-img" src={"./assets/hero.png"} />
     </section>
   );
